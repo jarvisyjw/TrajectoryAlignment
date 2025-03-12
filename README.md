@@ -63,7 +63,7 @@ sudo make install
 
 ## Running the Program
 
-The program expects two trajectory files as input: a ground truth trajectory and an estimated trajectory. Each file should contain poses in the following format:
+The program expects two trajectory files as input: a ground truth trajectory and an estimated trajectory. Each file should contain poses in the following format, consistent with TUM format:
 
 ```
 timestamp tx ty tz qx qy qz qw
@@ -72,6 +72,9 @@ timestamp tx ty tz qx qy qz qw
 Where:
 - `tx, ty, tz` are the translation components.
 - `qx, qy, qz, qw` are the quaternion components of the rotation.
+
+Note:
+Current implementation does not include the time alignment, so you have to input two timely sychronized trajectries.
 
 ### Example Usage
 
