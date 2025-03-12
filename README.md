@@ -89,7 +89,7 @@ Current implementation does not include the time alignment, so you have to input
 
 ### Example Input Files
 
-GT (`./example/trajectory_gt.txt`), estimated (`./example/trajectory_vo.txt`).
+groundtruth (`./example/trajectory_gt.txt`), estimated (`./example/trajectory_vo.txt`).
 
 ```bash
 ./main ./example/trajectory_gt.txt ./example/trajectory_vo.txt
@@ -106,8 +106,6 @@ GT (`./example/trajectory_gt.txt`), estimated (`./example/trajectory_vo.txt`).
 3. **Segmentation Fault**:
    Verify the input files are formatted correctly and contain valid data.
 
----
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
@@ -116,59 +114,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 If you have any questions or issues, feel free to open an issue in the repository or contact the [maintainer](jyubt@connect.ust.hk).
 
-### Reference
+## Reference
 
 The trajectory alignment is based on the Umeyama algorithm:
 
 [1] B. Umeyama, "Least-squares estimation of transformation parameters between two point patterns," in *IEEE Transactions on Pattern Analysis and Machine Intelligence*, vol. 13, no. 4, pp. 376–380, April 1991.  
-
-
-
-<!-- # TrajectoryErrorCalculationAndDrawing
-This is a small demo to compare and plot SLAM estimated trajectories and ground-truth trajectories.
-
-The whole demo is tested in **Ubuntu** Platorforms
-
-## Mathematical theory
-<div align=center>  
-  
-![](https://github.com/TianQi-777/TrajectoryErrorCalculationAndDrawing/blob/master/images/formula1.png)
-</div>
-
-## Data description
-**ground-truth.txt**:ground-truth trajectories data  
-**estimate.txt**:estimated trajectories data  
-
-**Data storage form**  
-Time  Translation-x  Translation-y  Translation-z  Quaternion-x  Quaternion-y  Quaternion-z  Quaternion-w  
-
-## Additional Prerequisites for this demo
-**Pangolin**  
-Use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and interface. 
-Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
-
-**Sophus**  
-Use [Sophus](https://github.com/strasdat/Sophus) for Lie groups commonly used for 2d and 3d geometric problems. 
-Dowload and install instructions can be found at: https://github.com/strasdat/Sophus.
-
-## Build and Run
-```
-cd XX/XX(include estimated.cpp ,estimated.txt ,groundtruth.txt and CMakeLists.txt)  
-mkdir build  
-cd build  
-cmake ..  
-make -j2  
-./estimated
-```
-
-## Result
-**Pangolin GUI:** .  
-<div align=center>  
-  
-![](https://github.com/TianQi-777/TrajectoryErrorCalculationAndDrawing/blob/master/images/drawing.png)
-</div>
-
-
-
-
- -->
